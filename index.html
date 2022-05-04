@@ -9,8 +9,10 @@
     <title>Jajanken Poy</title>
   </head>
   <body>
+    <!-- main background image -->
     <div class="bg-img"></div>
 
+    <!-- container for rock, paper and scissors buttons -->
     <div class="container">
       <h1>Choose one</h1>
 
@@ -28,6 +30,7 @@
         </button>
       </div>
 
+      <!-- status for user and cpu picks -->
       <div class="choices">
         <div>
           <h2>You picked: <span id="user-pick"></span></h2>
@@ -36,7 +39,11 @@
           <h2>CPU picked: <span id="cpu-pick"></span></h2>
         </div>
       </div>
+
+      <!-- placeholder for displaying if user wins, loses, or game is a draw -->
       <h1 id="status"></h1>
+
+      <!-- play again and reset buttons -->
       <div class="play-reset">
         <button id="play">Play</button>
         <button id="reset">Reset</button>

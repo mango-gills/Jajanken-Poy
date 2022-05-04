@@ -14,10 +14,22 @@ rpsButtons.forEach((btn) => {
     gamePlay(btn, rand);
     cpuPick.innerText = rand.toUpperCase();
     userPick.innerText = btn.classList[1].toUpperCase();
+    gameStatus.style.transform = `rotate(2deg)`;
+    setTimeout(() => {
+      gameStatus.style.transform = `rotate(0deg)`;
+    }, 400);
   });
 });
 
-// console.log(choiceRandomizer());
+function moveText() {
+  gameStatus.style.transform = `rotate(4deg)`;
+}
+
+function clearStatus() {
+  userPick.innerText = "";
+  cpuPick.innerText = "";
+  gameStatus.innerText = "";
+}
 
 function choiceRandomizer() {
   const random = Math.floor(Math.random() * 3) + 1;
@@ -70,7 +82,5 @@ function gamePlay(btn, random) {
 }
 
 resetBtn.addEventListener("click", () => {
-  userPick.innerText = "";
-  cpuPick.innerText = "";
-  gameStatus.innerText = "";
+  clearStatus();
 });

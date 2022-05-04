@@ -9,7 +9,6 @@ body {
   background-color: #252525;
   width: 100vw;
   height: 100vh;
-  transition: 0.3 ease-in;
 }
 
 .bg-img {
@@ -61,8 +60,6 @@ h2 {
 }
 
 .icons-container {
-  /* background: #fff; */
-  /* background: #fff; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -119,6 +116,6 @@ h2 {
   margin: 10px;
 }
 
-.play-reset button:active {
+.play-reset button:hover {
   color: crimson;
 }
