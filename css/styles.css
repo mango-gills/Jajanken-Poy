@@ -13,7 +13,7 @@ body {
 
 .bg-img {
   position: absolute;
-  background-image: url("/Jajanken-Poy/images/hexagons.svg");
+  background-image: url("/images/hexagons.svg");
   opacity: 0.2;
   background-size: 150px;
   width: 100%;
