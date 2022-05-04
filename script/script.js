@@ -29,28 +29,6 @@ function choiceRandomizer() {
 }
 
 function gamePlay(btn, random) {
-  //   if (btn.classList.contains("scissor") && random == "paper") {
-  //     choice.innerText = "You win";
-  //   } else if (btn.classList.contains("scissor") && random == "rock") {
-  //     choice.innerText = "You lost";
-  //   } else {
-  //     choice.innerText = "Draw";
-  //   }
-  //   if (btn.classList.contains("paper") && random == "rock") {
-  //     choice.innerText = "You win";
-  //   } else if (btn.classList.contains("paper") && random == "scissor") {
-  //     choice.innerText = "You lost";
-  //   } else {
-  //     choice.innerText = "Draw";
-  //   }
-  //   if (btn.classList.contains("rock") && random == "scissor") {
-  //     choice.innerText = "You win";
-  //   } else if (btn.classList.contains("rock") && random == "paper") {
-  //     choice.innerText = "You lost";
-  //   } else {
-  //     choice.innerText = "Draw";
-  //   }
-
   switch (true) {
     case btn.classList.contains("scissor"):
       if (random == "paper") {
