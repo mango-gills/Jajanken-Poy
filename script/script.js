@@ -1,14 +1,19 @@
-const choice = document.getElementById("choice");
-const scissor = document.querySelector("#scissor");
-const paper = document.querySelector("#paper");
-const rock = document.querySelector("#rock");
+// game buttons
+const playBtn = document.getElementById("play");
+const resetBtn = document.getElementById("reset");
+const rpsButtons = document.querySelectorAll(".clickBtn");
 
-const buttons = document.querySelectorAll(".clickBtn");
+// status elements
+const gameStatus = document.getElementById("status");
+const userPick = document.getElementById("user-pick");
+const cpuPick = document.getElementById("cpu-pick");
 
-buttons.forEach((btn) => {
+rpsButtons.forEach((btn) => {
   btn.addEventListener("click", () => {
     const rand = choiceRandomizer();
     gamePlay(btn, rand);
+    cpuPick.innerText = rand.toUpperCase();
+    userPick.innerText = btn.classList[1].toUpperCase();
   });
 });
 
@@ -32,34 +37,40 @@ function gamePlay(btn, random) {
   switch (true) {
     case btn.classList.contains("scissor"):
       if (random == "paper") {
-        choice.innerText = "You win";
+        gameStatus.innerText = "You win";
       } else if (random == "rock") {
-        choice.innerText = "You lost";
+        gameStatus.innerText = "You lost";
       } else {
-        choice.innerText = "Draw";
+        gameStatus.innerText = "Draw";
       }
       break;
     case btn.classList.contains("paper"):
       if (random == "rock") {
-        choice.innerText = "You win";
+        gameStatus.innerText = "You win";
       } else if (random == "scissor") {
-        choice.innerText = "You lost";
+        gameStatus.innerText = "You lost";
       } else {
-        choice.innerText = "Draw";
+        gameStatus.innerText = "Draw";
       }
       break;
     case btn.classList.contains("rock"):
       if (random == "scissor") {
-        choice.innerText = "You win";
+        gameStatus.innerText = "You win";
       } else if (random == "paper") {
-        choice.innerText = "You lost";
+        gameStatus.innerText = "You lost";
       } else {
-        choice.innerText = "Draw";
+        gameStatus.innerText = "Draw";
       }
       break;
 
     default:
       break;
   }
-  return choice;
+  return gameStatus;
 }
+
+resetBtn.addEventListener("click", () => {
+  userPick.innerText = "";
+  cpuPick.innerText = "";
+  gameStatus.innerText = "";
+});

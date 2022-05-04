@@ -9,6 +9,7 @@ body {
   background-color: #252525;
   width: 100vw;
   height: 100vh;
+  transition: 0.3 ease-in;
 }
 
 .bg-img {
@@ -23,6 +24,29 @@ body {
 h1 {
   color: #fff;
   font-size: 80px;
+}
+
+.choices {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.choices div {
+  width: 440px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  padding: 25px;
+}
+
+.choices div span {
+  color: #fff;
+}
+
+h2 {
+  color: crimson;
+  font-size: 40px;
+  opacity: 0.8;
 }
 
 .container {
@@ -76,6 +100,10 @@ h1 {
   color: #252525;
   transform: translateX(-8px) translateY(8px);
   box-shadow: -4px 4px 0px 0px rgba(133, 6, 32, 0.822);
+}
+
+#status {
+  margin-top: 20px;
 }
 
 .play-reset {
