@@ -32,16 +32,17 @@ rpsButtons.forEach((btn) => {
       setTimeout(() => {
         gameStatus.style.transform = `rotate(0deg)`;
       }, 400);
-    } else {
+      gameCounter -= 1;
+    }
+    if (gameCounter == 0) {
       if (parseInt(userScore.innerText) > parseInt(cpuScore.innerText)) {
-        alert("Game Over, You Won!");
+        gameStatus.innerText = "Game Over, You Won!";
       } else if (parseInt(userScore.innerText) < parseInt(cpuScore.innerText)) {
-        alert("Game Over, CPU Won!");
+        gameStatus.innerText = "Game Over, CPU Won!";
       } else {
-        alert(`Game Over, It's a draw!`);
+        gameStatus.innerText = "Game Over, It's a Draw!";
       }
     }
-    gameCounter -= 1;
   });
 });
 
