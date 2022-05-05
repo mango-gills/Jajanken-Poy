@@ -15,6 +15,7 @@
     <!-- container for rock, paper and scissors buttons -->
     <div class="container">
       <h1>Choose one</h1>
+      <h3>First one to score 5 points wins the game.</h3>
 
       <div class="icons-container">
         <button class="clickBtn scissor">
@@ -35,6 +36,13 @@
         <div>
           <h2>You picked: <span id="user-pick"></span></h2>
         </div>
+
+        <div class="score">
+          <h2 id="userScore">0</h2>
+          <h2>:</h2>
+          <h2 id="cpuScore">0</h2>
+        </div>
+
         <div>
           <h2>CPU picked: <span id="cpu-pick"></span></h2>
         </div>

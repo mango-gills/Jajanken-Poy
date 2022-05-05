@@ -12,9 +12,11 @@ rpsButtons.forEach((btn) => {
   btn.addEventListener("click", () => {
     const rand = choiceRandomizer();
     gamePlay(btn, rand);
+
     cpuPick.innerText = rand.toUpperCase();
     userPick.innerText = btn.classList[1].toUpperCase();
     gameStatus.style.transform = `rotate(2deg)`;
+
     setTimeout(() => {
       gameStatus.style.transform = `rotate(0deg)`;
     }, 400);
