@@ -5,8 +5,9 @@
 }
 
 body {
-  font-family: "Lato", sans-serif;
+  color: #fff;
   background-color: #252525;
+  font-family: "Lato", sans-serif;
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -40,7 +41,7 @@ body {
   border-radius: 25px;
   width: 100%;
   height: 30%;
-  margin: 0 auto;
+  margin: 10px auto;
 }
 
 .icons-container button {
@@ -50,7 +51,6 @@ body {
 }
 
 h1 {
-  color: #fff;
   font-size: 80px;
 }
 h3 {
@@ -119,6 +119,7 @@ h3 {
 
 #status {
   margin-top: 20px;
+  font-size: 70px;
 }
 
 .play-reset {
